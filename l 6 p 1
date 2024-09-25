@@ -1,0 +1,49 @@
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+struct exam {
+    float first; 
+    float second; 
+    float final; 
+};
+
+class subject {
+private: 
+    char name[10]; 
+    exam Exam; 
+public:
+    // Default constructor
+    subject() {
+        strcpy(name, "no name");
+        Exam = {0, 0, 0}; 
+    }
+
+    // Parameterized constructor
+    subject(const char n[], float a, float b, float c) {
+        strncpy(name, n, sizeof(name) - 1);
+        name[sizeof(name) - 1] = '\0'; // Ensure null termination
+        Exam = {a, b, c}; 
+    }   
+
+    // Function to calculate total marks
+    float total() {
+        return Exam.first + Exam.second + Exam.final; 
+    } 
+
+    // Function to print details
+    void print() {
+        cout << "The subject id: " << name << '\n'
+             << "The first exam: " << Exam.first << '\n'
+             << "The second exam: " << Exam.second << '\n'
+             << "The final exam: " << Exam.final << "\n"
+             << "Total: " << total() << endl; 
+    }
+};
+
+int main() {
+    subject e("oop", 23, 34, 44);
+    e.print(); 
+    
+    return 0;
+}
