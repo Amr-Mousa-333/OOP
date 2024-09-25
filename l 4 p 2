@@ -1,0 +1,35 @@
+#include <iostream>
+#include <cstring> 
+#include <algorithm> 
+using namespace std ;
+class student {
+private :
+char name[20] ; 
+int id ; 
+public :
+student ()
+{
+    strcpy(name , "no name ") ;
+    id  = 0 ; 
+    }
+student (char n[] , int s   ) 
+{  
+    
+    cout <<" p const \n " ; 
+    strcpy(name , n ) ;
+    id  = s ; 
+    }
+student (char n[]) { 
+    cout << "char con\n" ;  
+   strcpy(name , n  ) ; 
+}    
+    
+void print (){
+    cout <<"name = " <<name << "\n" <<"id = "<<id<<"\n" ; 
+}     
+};
+int main() {
+ student ob("amr" ) ; 
+ ob.print() ; 
+    return 0;
+}
