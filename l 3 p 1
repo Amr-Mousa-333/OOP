@@ -1,0 +1,63 @@
+#include <iostream>
+#include <cstring> 
+#include <algorithm> 
+using namespace std ;
+class car {
+   private : 
+   char name[15] ; 
+   char color[10] ; 
+   int maxspeed ; 
+   int model ; 
+   public : 
+   void setname(char n[])
+   {
+       strcpy(name,n) ; 
+   }
+   
+    void setcolor(char n[])
+   {
+       strcpy(color,n) ; 
+   }
+    void setmaxspeed(int  n)
+   {
+       maxspeed = n ; 
+   }
+   
+     void setmodel(int  n)
+   {
+       model  = n ; 
+   }
+   char* getname ()
+   {
+       return name ; 
+   }
+     char* getcolor ()
+   {
+       return color ; 
+   }
+      int  getmaxspeed ()
+   {
+       return maxspeed ; 
+   }
+        int  getmodel ()
+   {
+       return model ; 
+   }
+    void print()
+   {
+       cout<<"name = " <<name<<"\n";
+       cout<<"color = " <<color<<"\n";
+       cout<<"maxspeed = " <<maxspeed<<"\n";
+       cout<<"model = " <<model<<"\n";
+   }
+
+} ;
+int main() {
+ car x ;  
+ x.setname("kia") ; 
+ x.setcolor("red") ; 
+ x.setmaxspeed(300) ; 
+ x.setmodel(2000) ; 
+ x.print() ;    
+    return 0;
+}
