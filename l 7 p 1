@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std ; 
+class crectangle{
+private : 
+    int *w , *h ;
+public :
+crectangle(int a  , int b ){
+    w = new int ; 
+    h = new int ; 
+    *w = a ; 
+    *h = b ; }  
+~crectangle() {
+    delete w ; 
+    delete h ; } 
+int area() {
+    return (*w * *h) ; }
+
+};
+
+int   main() {
+crectangle a(3,4) ; 
+cout <<"area is "<< a.area() ; 
+
+    return 0;
+}
