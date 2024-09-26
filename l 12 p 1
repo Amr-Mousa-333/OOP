@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std ; 
+class timee {
+private :
+int h, m   ; 
+public :
+timee (int i , int j ){
+    h = i ; 
+    m = j ; 
+}
+friend int sum (timee ob) ; 
+};
+int sum (timee ob) {
+    return ob.h + ob.m ; 
+}
+int main() {
+ const  timee aa(12,2 ) ;
+  cout << sum(aa); 
+    return 0;
+}
