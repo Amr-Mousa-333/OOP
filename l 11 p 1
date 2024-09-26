@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std ; 
+class timee {
+private :
+int h, m , s  ; 
+public :
+void print () const {
+    cout <<"time" << h << ":" << m <<":"<<s <<endl ; }
+timee (int a , int b , int c ){
+    h = a ; 
+    m = b ; 
+    s = c  ;}
+};
+int main() {
+ const  timee aa(12,2 ,3) ;
+  aa.print() ; 
+    return 0;
+}
