@@ -1,0 +1,17 @@
+#include <iostream>
+#include <cstring>
+#include <algorithm> 
+#include <string> 
+using namespace std ; 
+enum days { set = 1 , sunnn , mon , tue , yend , thut , fri} ; 
+//const int sun = 1 ; 
+
+
+int   main() {
+days m[7] = { set , sunnn , mon , tue , yend , thut , fri} ; 
+for (int i = 0 ; i < 7 ; i++)
+{
+    cout << m[i] << endl ; 
+}
+    return 0;
+}
