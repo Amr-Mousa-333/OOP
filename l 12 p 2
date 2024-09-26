@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std ; 
+class B ; 
+class A{
+private :
+int w1, h1   ; 
+public :
+void seta(int a  , int b ){
+    w1 = a , h1 = b ;
+}
+friend int sum(B T, A R) ;
+};
+class B {
+private :
+int w2 , h2    ; 
+public :
+ B(int a  , int b ){
+    w2 = a , h2 = b ;
+}friend int sum(B T, A R)  ; 
+};
+int sum(B T, A R){
+    return T.w2 + R.w1 ;
+}
+int main() {
+ A r ; 
+ r.seta(2,3) ; 
+ B l(5 , 10)  ; 
+ cout << sum(l , r ) << endl ; 
+    return 0;
+}
