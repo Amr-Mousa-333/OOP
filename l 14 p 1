@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+class MyClass { // Renamed the class to MyClass
+public:
+    void add() {
+        cout << this; 
+    }
+};
+
+int main() {
+    MyClass a, b, c; // Updated the class name
+    cout << "The address of a: ";
+    a.add(); 
+    cout << endl << "The address of b: "; 
+    b.add(); 
+    cout << endl << "The address of c: "; 
+    c.add(); 
+    return 0;
+}
