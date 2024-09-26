@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+
+class triangle {
+private:
+    float w, h;
+public:
+    triangle(float a = 0, float b = 0) {
+        w = a; 
+        h = b; 
+    }
+    
+    void getdata() {
+        cout << "Enter width: ";
+        cin >> w; 
+        cout << "Enter height: ";
+        cin >> h; 
+    }
+    
+    void showdata() {
+        cout << "Width = " << w << ", Height = " << h << endl;  
+    }
+    
+    void add(triangle c1, triangle c2) {
+        w = c1.w + c2.w; 
+        h = c1.h + c2.h; // Fixed the typo here
+    }
+};
+
+int main() {
+    triangle c1, c2(3.4, 5.6), c3; // Fixed c2 initialization
+    c1.getdata(); 
+    c3.add(c1, c2); 
+    c3.showdata(); 
+    return 0;
+}
